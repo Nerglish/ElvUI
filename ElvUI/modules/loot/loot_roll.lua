@@ -256,7 +256,9 @@ local function START_LOOT_ROLL(rollid, time)
 	SetDesaturation(f.needbutt:GetNormalTexture(), not canNeed)
 	SetDesaturation(f.greedbutt:GetNormalTexture(), not canGreed)
 	SetDesaturation(f.disenchantbutt:GetNormalTexture(), not canDisenchant)
-
+	f.needbutt:SetAlpha(canNeed and 1 or 0.2)
+	f.greedbutt:SetAlpha(canGreed and 1 or 0.2)
+	f.disenchantbutt:SetAlpha(canDisenchant and 1 or 0.2)
 
 	f.fsbind:SetText(bop and "BoP" or "BoE")
 	f.fsbind:SetVertexColor(bop and 1 or .3, bop and .3 or 1, bop and .1 or .3)
